@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sample',
-        'HOST':'localhost',
+        'HOST':'https://user-login-portal.herokuapp.com',
         'PORT':'3306',
         'USER':'root',
         'PASSWORD':'akshat@1',
