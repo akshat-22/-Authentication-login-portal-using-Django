@@ -76,12 +76,9 @@ WSGI_APPLICATION = 'userproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sample',
-        'HOST':'https://user-login-portal.herokuapp.com/',
-        'PORT':'3306',
-        'USER':'root',
-        'PASSWORD':'akshat@1',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR/'dbsqlite',
+       
     }
 }
 
