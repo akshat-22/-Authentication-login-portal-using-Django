@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'x1p4&7-ver6#==kchd)b7#tpx%1p5$)du76qop%ivb!qlij43&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['Akshatworks.com','127.0.0.1']
+ALLOWED_HOSTS = ['user-login-portal.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'userproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sample',
+        'HOST':'https://user-login-portal.herokuapp.com/',
+        'PORT':'3306',
+        'USER':'root',
+        'PASSWORD':'akshat@1',
     }
 }
 
@@ -117,7 +121,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
+STATIC_ROOT=BASE_DIR / "staticfiles"
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
